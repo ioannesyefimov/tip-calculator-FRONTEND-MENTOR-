@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+ 
+</head>
+<body>
+ <main>
+  <section class="main-calc">
+    <header class="logo"><img src="images/logo.svg" alt=""></header>
+    <section class="calculator">
+      <div class="tipcalc">
+       <div class="bill">
+        <p>Bill</p>
+        <div class="flex-group">
+          <img src="images/icon-dollar.svg" alt="">
+          <input type="number" id="input-bill" placeholder="0.00" value=""></input>
+        </div>
+       </div>
+       <div class="selecting-tip">
+        <p class="tip">Select Tip %</p>
+        <div class="tip-percent">
+          <input type="button" name="tip" value="5%" class="percentage" id="tip-5" />
+          <input type="button" name="tip" value="10%" class="percentage" id="tip-10" />
+          <input type="button" name="tip" value="15%" class="percentage toggled-percent" id="tip-15" />
+          <input type="button" name="tip" value="25%" class="percentage" id="tip-25" />
+          <input type="button" name="tip" value="50%" class="percentage" id="tip-50" />
+          <input
+            type="number"
+            id="tip-amount"
+            min="0"
+            max="100"
+            step="1"
+            placeholder="Custom"
+            class=""
+          />
+        </div>
+       </div>
+       <div class="number-people">
+        <p>Number of People</p>
+        <div class="flex-group">
+          <img src="images/icon-person.svg" alt="">
+          <input type="number" id="input-people" value=""></input>
+        </div>
+       </div>
+    
+      </div>
+      <div class="tipcalc2">
+        <div class="flex-group3">
+          <div class="flex-group2">
+            <p>Tip Amount</p>
+            <span id="tip-person">/ person</span>
+          </div>
+    
+          <h1 id="total-tip"></h1>
+        </div>
+    
+        <div class="flex-group3">
+            <div class="flex-group2">
+              <p >Total</p>
+              <span id="tip-person">/ person</span>
+            </div>
+            <h1 id="total-amount"></h1>
+        </div>
+        <button id="reset" class="btn">Reset</button>
+        </div>
+      </section>
+      <div class="currency" >
+        <h1 id="heading-currency">Currency:</h1>
+        <button id="curency" value="$" class="">
+          <h1 id="dollar">$</h1>
+        </button>
+        <button id="curency" value="€">
+          <h1 id="euro">€</h1>
+        </button>
+        <button id="curency" value="₴">
+          <h1 id="grivna">₴</h1>
+        </button>
+      </div>
+      <span id="error-text"></span>
+  </section>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/ioannesyefimov">Ioannes</a>.
+ </main>
+
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

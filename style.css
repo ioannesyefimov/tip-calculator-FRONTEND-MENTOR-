@@ -1,0 +1,375 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap');
+  :root {
+    --clr-primary:hsl(172, 67%, 45%);
+
+    --clr-neutral-dcyan:hsl(183, 100%, 15%);
+    --clr-neutral-dgcyan:hsl(186, 14%, 43%);
+    --clr-neutral-gcyan:hsl(184, 14%, 56%);
+    --clr-neutral-lgcyan:hsl(185, 41%, 84%);
+    --clr-neutral-vlgcyan:hsl(189, 41%, 97%);
+    --clr-neutral-white:hsl(0, 0%, 100%);
+
+    --ff-base: 'Space Mono', monospace;
+
+}
+body{
+    font-family: var(--ff-base);
+    font-size: 20px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-neutral-lgcyan);
+    width: 100%;
+    padding: 0rem 2rem;
+   
+   
+}
+p{
+    color: var(--clr-neutral-dgcyan);
+    font-weight: 600;
+}
+header{
+    padding: 3rem;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    gap: 30px;
+    background-color: var(--clr-neutral-white);
+    align-self: stretch;
+    padding:2rem;
+    border-radius: 15px 15px 0px 0px;
+    align-self: center;
+}
+
+/* Tip Calc first */
+.tipcalc {
+ 
+    display: grid;
+    gap: 2rem;
+}
+li::after {
+    content: '%';
+
+}
+
+
+.flex-group{
+    display: flex;
+    padding: 0.2rem 1rem;
+    background-color: var(--clr-neutral-vlgcyan);
+}
+.flex-group img {
+   height: 3vh;
+   align-self: center;
+}
+
+.tip-percent {
+    display: flex;
+    /* width: 50%; */
+    flex-wrap: wrap;
+   
+    gap: 1rem;
+    
+    
+    
+ 
+   
+    
+    
+}
+.tip {
+    margin-bottom: 0.6rem;
+}
+ul {
+    padding: 0;
+}
+.percentage {
+    background-color: var(--clr-neutral-dcyan);
+    list-style: none;
+    border-radius: 5px;
+    padding: clamp(0.2rem, 1vw, 3rem );
+    text-align: center;
+    color: var(--clr-neutral-white);
+    font-weight: 700;
+    transition: 0.3s;
+   flex: 45%;
+    
+
+    
+}
+
+.percentage:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-dcyan);
+    cursor: pointer;
+}
+/* .percentage:focus {
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-dcyan);
+} */
+#input-bill, #imput-people {
+    text-align: right;
+   
+}
+
+
+input {
+    text-align: right;
+    border: none;
+    background-color: var(--clr-neutral-vlgcyan);
+    margin-left: auto;
+    
+    color: var(--clr-neutral-dgcyan)
+    
+    
+}
+#tip-amount{
+   margin: 0;
+    text-align: center;
+    flex: 45%;
+    max-width: 40vw;
+
+
+    
+     
+}
+
+/* Tip Calc amount */
+
+.tipcalc2{
+    background-color: var(--clr-neutral-dcyan);
+    padding: 2rem 1rem 1.5rem;
+    width: 90%;
+    border-radius: 15px;
+    display: grid ;
+    gap: 1.5rem
+}
+.tipcalc2 p {
+    color: var(--clr-neutral-white);
+    font-size: 1rem;
+}
+#tip-person {
+    color: var(--clr-neutral-gcyan);
+}
+.flex-group3 {
+    display: flex;
+    
+}
+.tipcalc2 h1{
+    margin-left: auto;
+    color: var(--clr-primary);
+    font-size: clamp(2rem, 2.5rem ,2.5rem);
+}
+
+
+.btn {
+    background-color: var(--clr-primary);
+    border: none;
+    border-radius: 5px;
+    padding: .6rem;
+    text-transform: uppercase;
+    color: var(--clr-neutral-dcyan);
+    font-weight: 600;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.attribution {
+    margin: 10rem 0 0;
+
+}
+
+.main-calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.currency {
+    display: flex;
+    padding: 0 8rem 0 6rem;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 0px 0px 15px 15px;
+    margin: 0 auto ;
+    width: 100%;
+    
+   
+    background-color: var(--clr-neutral-white);
+}
+#heading-currency{
+    align-self: center;
+    line-height: none;
+
+  font-size: 1.5rem;
+    color: var(--clr-primary);
+}
+.currency {
+    max-width: 70%;
+
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+
+
+    
+}
+#curency{
+    color:var(--clr-primary);
+  margin-top: 1rem;
+    display: flex;
+  justify-content: center;
+    color:  var(--clr-primary);
+    border: var(--clr-neutral-white) 2px solid;
+    border-radius: 50px;
+    font-size: 1.2rem;
+   max-width: 65px;
+    max-height: 65px;
+    margin-bottom: 1rem;
+   
+   
+}
+.error {
+    border: 2px solid red;
+    background-color: black;
+}
+.toggled-percent{
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-dcyan);
+    cursor: pointer;
+   
+  
+}
+.toggled-currency {
+    background-color: var(--clr-neutral-dcyan);
+    color:  var(--clr-primary);
+    cursor: pointer;
+    
+}
+#tip-amount {
+   max-width: 10rem;
+}
+
+/* DEKSTOP LAYOUT */
+
+@media (min-width: 950px) {
+    main{
+        padding: 2rem 5rem;
+        flex-direction: column;
+        
+
+    }
+    .currency{
+        width: 80%;
+        max-width: none;
+    }
+    
+    .calculator{
+        flex-direction: row;
+        gap:4rem;
+        max-width: 80%;
+        justify-content: center;
+        align-self: center;
+        
+    }
+    .tipcalc{
+        flex: 40%
+    }
+    .tipcalc2{
+        align-self: stretch;
+        padding: 4rem 1.5rem 2rem;
+        flex: 50%
+       
+    }
+    .btn {
+        margin-top: 4rem;
+        align-self: flex-end;
+    }
+    .percentage{
+        flex:36%
+    }
+    #tip-amount{
+        margin: 0;
+         text-align: center;
+         max-width: 11.5rem;
+       
+         
+       flex:15%
+         
+     
+     
+         
+          
+     }
+     #curency{
+        color:var(--clr-primary);
+       align-self: center; 
+        display: flex;
+      justify-content: center;
+        color:  var(--clr-primary);
+        border: var(--clr-neutral-white) 2px solid;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        width: 75px;
+        height: 75px;
+       
+        margin-bottom: 1.2rem;
+    }
+     .tipcalc2{
+       
+     }
+}
